@@ -1,0 +1,1631 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+      *{
+          margin: 0;
+          padding: 0;          
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          box-sizing: border-box;
+      }
+      /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: 900;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+
+[hidden] {
+  display: none;
+}
+    </style>
+  </head>
+  <body style="margin: 0; padding: 0; background-color: #ffffff">
+     <div style="margin: 0px auto; max-width: 600px">
+
+
+    <!-- SECTION CLUBE SMILES VANTAGENS -->
+    <table cellpadding="0" cellspacing="0" width="600" align="center" style="background-color: #FFFFFF;">
+
+      <!-- HEADER SMILES -->
+      <table cellpadding="0" cellspacing="0" width="600" align="center" style="background-color: #FFFFFF;">
+           <tr>
+             <td width="25"></td>
+             <td width="535" valign="middle">
+               <div style="max-height: 122px; background-color: #FFFFFF">
+                <img style="margin: 42px 24px" src="https://smiles-mkt.s3.amazonaws.com/emails_clube_smiles/clube_corporativo/path9955.png" alt="LOGO SMILES" />
+               </div>
+             </td>
+             <td width="25"></td>
+            </tr>
+      </table>
+     
+      <!-- BANNER -->
+      <div style="margin: 0px auto; max-width: 600px">
+        <img src="https://s3.amazonaws.com/unroll-images-production/projects%2F48034%2F1637584679038-Frame+53134.png" alt="">
+      </div>
+
+      <!-- TITLE SECTION "Olá temos um novo benefício pra você" -->
+        <table cellpadding="0" cellspacing="0" width="600" align="center" style="background-color: #FFFFFF;">
+        <tr height=20"></tr>
+
+        <div style="margin: 0px auto; max-width: 600px">
+          <tr >
+             <td width="25"></td>
+            <td width="535" >
+                <p 
+                style="
+                  margin: 0;
+                  margin-top: 5px;
+                  margin-bottom: 5px;
+                  font-family: Arial, Helvetica, sans-serif;
+                  font-style: normal;
+                  font-weight: bold;
+                  font-size: 24px;
+                  line-height: 28px;
+                  color: #663399;">
+                    Olá, tem certeza que ficará de fora do<br> Clube Smiles Corporativo?
+                  </p>
+                  
+            </td>
+             <td width="25"></td>
+        </tr>
+        <tr height="24"></tr>
+        </table>
+        
+      <!-- TITLE SECTION "Agora você pode acelerar..." -->
+
+        <table cellpadding="0" cellspacing="0" width="600" align="center" style="background-color: #FFFFFF;">
+            <div style="margin: 0px auto; max-width: 600px">
+          <tr>
+                <td width="25"></td>
+                  <td width="535" >
+                <p style="
+                        margin: 0;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-style: normal;
+                        font-weight: 300;
+                        font-size: 16px;
+                        line-height: 24px;
+                        color: #7C7C7C;">
+                        Com ele você acelera o acúmulo de milhas e o planejamento da sua<br>
+                        próxima viagem!
+                        <br><br>
+                      </p>
+                      
+
+                      <p style="
+                        margin: 0;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-style: normal;
+                        font-weight: 300;
+                        font-size: 16px;
+                        line-height: 24px;
+                        color: #7C7C7C;"> E o melhor, por um valor especial que você pode pagar com cartão de<br>
+                        crédito ou débito em folha.</p>
+                      </td>
+                <td width="25"></td>
+                  </tr>
+                  </div>
+            <tr height="40"></tr>
+
+        </table>
+
+        <!-- Com o Clube Smiles você aproveita -->
+        <table cellpadding="0" cellspacing="0" width="600" align="center" style="background-color: #FFFFFF;">
+          <tr >
+             <td width="25"></td>
+             <td width="15" valign="top">
+               <div style="width: 4px;
+                height: 40px;
+                background-color: #663399;"></div>
+             </td>
+            <td width="535" >
+                <p 
+                style="
+                  margin: 0;
+                  margin-top: 5px;
+                  margin-bottom: 15px;
+                  font-family: Arial, Helvetica, sans-serif;
+                  font-style: normal;
+                  font-weight: bold;
+                  font-size: 24px;
+                  line-height: 28px;
+                  color: #663399;">
+                    Com o Clube Smiles você aproveita<br> vantagens exclusivas
+                  </p>
+                  
+            </td>
+             <td width="25"></td>
+           </tr>
+        </table>
+
+       <!-- CARDS DE VANTAGENS -->
+        <table cellpadding="0" cellspacing="0" width="600" align="center" style="background-color: #FFFFFF;">
+          <div style="margin: 0px auto; max-width: 600px">
+           <tr>
+             <td width="535">
+                <img style="height: 400px; width: 600px" src="https://smiles-mkt.s3.amazonaws.com/emails_clube_smiles/clube_corporativo/vantagens.png" alt="VANTAGENS SMILES" />
+             </td>
+            </tr>
+            <tr height="25"></tr>
+          </div>
+        </table>
+        <!-- FIM DOS CARDS DE VANTAGENS -->
+        
+    <!-- TITLE "SUA VIAGEM ESTA CADA VEZ MAIS PROXIMA" -->
+        <table cellpadding="0" cellspacing="0" width="600" align="center" style="background-color: #FFFFFF;">
+          <tr >
+             <td width="25"></td>
+             <td width="15" valign="top">
+               <div style="width: 4px;
+                height: 40px;
+                background-color: #663399;"></div>
+             </td>
+            <td width="535" >
+                <p 
+                style="
+                  margin: 0;
+                  margin-top: 5px;
+                  margin-bottom: 15px;
+                  font-family: Arial, Helvetica, sans-serif;
+                  font-style: normal;
+                  font-weight: bold;
+                  font-size: 24px;
+                  line-height: 28px;
+                  color: #663399;">
+                    Sua viagem está cada vez mais próxima
+                  </p>
+                  <p style="
+                    margin: 0;
+                    margin-top: 20px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 16px;
+                    line-height: 18px;
+                    color: #7C7C7C;">
+                    Conheça as diferenças do Clube Smiles Corporativo.
+                  </p>
+            </td>
+             <td width="25"></td>
+           </tr>
+           <tr height="10"></tr>
+        </table>
+    <!--  FIM DA SECTION TITLE "SUA VIAGEM ESTA CADA VEZ MAIS PROXIMA" -->
+
+
+    <!-- SECTION VALORES CORPORATIVO E PADRAO -->
+     <table cellpadding="0" cellspacing="25" width="600" style="background-color: #FFFFFF;">
+        <tbody>
+          <tr >
+            <!--VALOR CORPORATIVO  -->
+            <td valign="baseline" style="
+                padding: 24px;
+                background-color: #663399;
+                border-radius: 16px;
+              ">
+              <div
+              style="
+              margin-bottom: 10px; 
+              border-bottom: 1px solid #ffffffda; 
+              padding-bottom: 24px; 
+              margin-top: 20px;
+              
+                ">
+                <h4 style="
+                color: #FFFFFF;
+                font-family: Arial;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 26px;">Valor corporativo</h4>
+              </div>
+              <div style="
+                display: flex; 
+                justify-content: space-between; 
+                vertical-align: top; 
+                padding-bottom: 14px; 
+                border-bottom: 1px dashed #ffffffda;
+                margin-bottom: 20px; ">
+                <p style="
+                  color: #FFFFFF;
+                font-family: Arial;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 26px;
+                ">Plano 1.000</p>
+                <div style="
+                  text-align: right;
+                ">
+                  <p
+                    style="
+                      color: #FFFFFF;
+                      font-family: Arial;
+                      font-style: normal;
+                      font-weight: normal;
+                      font-size: 14px;
+                      text-decoration-line: line-through;
+                    "
+                  >R$ 00,00</p>
+                  <span style="
+                      color: #FFFFFF;
+                      font-family: Arial;
+                      font-style: normal;
+                      font-weight: normal;
+                      font-size: 12px;
+                  ">Valor mensal</span>
+                </div>
+              </div>
+              <div style="
+                display: flex; 
+                justify-content: space-between; 
+                vertical-align: top; 
+                padding-bottom: 14px; 
+                border-bottom: 1px dashed #ffffffda;
+                margin-bottom: 20px; ">
+                <p style="
+                  color: #ffffffda;
+                font-family: Arial;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 26px;
+                ">Plano 2.000</p>
+                <div style="
+                  text-align: right;
+                ">
+                  <p
+                    style="
+                      color: #FFFFFF;
+                      font-family: Arial;
+                      font-style: normal;
+                      font-weight: normal;
+                      font-size: 14px;
+                      text-decoration-line: line-through;
+                    "
+                  >R$ 00,00</p>
+                  <span style="
+                      color: #FFFFFF;
+                      font-family: Arial;
+                      font-style: normal;
+                      font-weight: normal;
+                      font-size: 12px;
+                  ">Valor mensal</span>
+                </div>
+              </div>
+              <div style="
+                display: flex; 
+                justify-content: space-between; 
+                vertical-align: top; 
+                padding-bottom: 14px; 
+                border-bottom: 1px dashed #ffffffda;
+                margin-bottom: 20px; ">
+                <p style="
+                  color: #FFFFFF;
+                font-family: Arial;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 26px;
+                ">Plano 5.000</p>
+                <div style="
+                  text-align: right;
+                ">
+                  <p
+                    style="
+                      color: #FFFFFF;
+                      font-family: Arial;
+                      font-style: normal;
+                      font-weight: normal;
+                      font-size: 14px;
+                      text-decoration-line: line-through;
+                    "
+                  >R$ 00,00</p>
+                  <span style="
+                      color: #FFFFFF;
+                      font-family: Arial;
+                      font-style: normal;
+                      font-weight: normal;
+                      font-size: 12px;
+                  ">Valor mensal</span>
+                </div>
+              </div>
+              <div style="
+                display: flex; 
+                justify-content: space-between; 
+                vertical-align: top; 
+                padding-bottom: 14px; 
+                border-bottom: 1px dashed #ffffffda;
+                margin-bottom: 20px; ">
+                <p style="
+                  color: #FFFFFF;
+                font-family: Arial;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 26px;
+                ">Plano 7.000</p>
+                <div style="
+                  text-align: right;
+                ">
+                  <p
+                    style="
+                      color: #FFFFFF;
+                      font-family: Arial;
+                      font-style: normal;
+                      font-weight: normal;
+                      font-size: 14px;
+                      text-decoration-line: line-through;
+                    "
+                  >R$ 00,00</p>
+                  <span style="
+                      color: #FFFFFF;
+                      font-family: Arial;
+                      font-style: normal;
+                      font-weight: normal;
+                      font-size: 12px;
+                  ">Valor mensal</span>
+                </div>
+              </div>
+              <div style="
+                display: flex; 
+                justify-content: space-between; 
+                vertical-align: top; 
+                padding-bottom: 14px; 
+                border-bottom: 1px dashed #ffffffda;
+                margin-bottom: 20px; ">
+                <p style="
+                  color: #FFFFFF;
+                font-family: Arial;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 26px;
+                ">Plano 10.000</p>
+                <div style="
+                  text-align: right;
+                ">
+                  <p
+                    style="
+                      color: #FFFFFF;
+                      font-family: Arial;
+                      font-style: normal;
+                      font-weight: normal;
+                      font-size: 14px;
+                      text-decoration-line: line-through;
+                    "
+                  >R$ 00,00</p>
+                  <span style="
+                      color: #FFFFFF;
+                      font-family: Arial;
+                      font-style: normal;
+                      font-weight: normal;
+                      font-size: 12px;
+                  ">Valor mensal</span>
+                </div>
+              </div>
+              <div style="
+                display: flex; 
+                justify-content: space-between; 
+                vertical-align: top; 
+                padding-bottom: 14px; 
+                 ">
+                <p style="
+                  color: #FFFFFF;
+                font-family: Arial;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 26px;
+                ">Plano 20.000</p>
+                <div style="
+                  text-align: right;
+                ">
+                  <p
+                    style="
+                      color: #FFFFFF;
+                      font-family: Arial;
+                      font-style: normal;
+                      font-weight: normal;
+                      font-size: 14px;
+                      text-decoration-line: line-through;
+                    "
+                  >R$ 00,00</p>
+                  <span style="
+                      color: #FFFFFF;
+                      font-family: Arial;
+                      font-style: normal;
+                      font-weight: normal;
+                      font-size: 12px;
+                  ">Valor mensal</span>
+                </div>
+              </div>
+              
+            </td>
+
+          <!-- VAOR PADRAO -->
+            <td valign="baseline" style="
+              padding: 24px;
+              background-color: #F2F2F2;
+              border-radius: 16px;
+            ">
+            <div
+             style="
+             margin-bottom: 24px; 
+             border-bottom: 1px solid #999999; 
+             padding-bottom: 24px; 
+             margin-top: 20px;
+            
+              ">
+              <h4 style="
+              color: #999999;
+              font-family: Arial;
+              font-style: normal;
+              font-weight: bold;
+              font-size: 18px;
+              line-height: 26px;">Valor padrão</h4>
+            </div>
+            <div style="
+              display: flex; 
+              justify-content: space-between; 
+              vertical-align: top; 
+              padding-bottom: 14px; 
+              border-bottom: 1px dashed #999999;
+              margin-bottom: 20px; ">
+              <p style="
+                color: #999999;
+              font-family: Arial;
+              font-style: normal;
+              font-weight: bold;
+              font-size: 14px;
+              line-height: 26px;
+              ">Plano 1.000</p>
+              <div style="
+                text-align: right;
+              ">
+                <p
+                  style="
+                    color: #999999;
+                    font-family: Arial;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 14px;
+                    text-decoration-line: line-through;
+                  "
+                >R$ 00,00</p>
+                <span style="
+                    color: #999999;
+                    font-family: Arial;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 12px;
+                ">Valor mensal</span>
+              </div>
+            </div>
+            <div style="
+              display: flex; 
+              justify-content: space-between; 
+              vertical-align: top; 
+              padding-bottom: 14px; 
+              border-bottom: 1px dashed #999999;
+              margin-bottom: 20px; ">
+              <p style="
+                color: #999999;
+              font-family: Arial;
+              font-style: normal;
+              font-weight: bold;
+              font-size: 14px;
+              line-height: 26px;
+              ">Plano 2.000</p>
+              <div style="
+                text-align: right;
+              ">
+                <p
+                  style="
+                    color: #999999;
+                    font-family: Arial;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 14px;
+                    text-decoration-line: line-through;
+                  "
+                >R$ 00,00</p>
+                <span style="
+                    color: #999999;
+                    font-family: Arial;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 12px;
+                ">Valor mensal</span>
+              </div>
+            </div>
+            <div style="
+              display: flex; 
+              justify-content: space-between; 
+              vertical-align: top; 
+              padding-bottom: 14px; 
+              border-bottom: 1px dashed #999999;
+              margin-bottom: 20px; ">
+              <p style="
+                color: #999999;
+              font-family: Arial;
+              font-style: normal;
+              font-weight: bold;
+              font-size: 14px;
+              line-height: 26px;
+              ">Plano 5.000</p>
+              <div style="
+                text-align: right;
+              ">
+                <p
+                  style="
+                    color: #999999;
+                    font-family: Arial;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 14px;
+                    text-decoration-line: line-through;
+                  "
+                >R$ 00,00</p>
+                <span style="
+                    color: #999999;
+                    font-family: Arial;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 12px;
+                ">Valor mensal</span>
+              </div>
+            </div>
+            <div style="
+              display: flex; 
+              justify-content: space-between; 
+              vertical-align: top; 
+              padding-bottom: 14px; 
+              border-bottom: 1px dashed #999999;
+              margin-bottom: 20px; ">
+              <p style="
+                color: #999999;
+              font-family: Arial;
+              font-style: normal;
+              font-weight: bold;
+              font-size: 14px;
+              line-height: 26px;
+              ">Plano 7.000</p>
+              <div style="
+                text-align: right;
+              ">
+                <p
+                  style="
+                    color: #999999;
+                    font-family: Arial;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 14px;
+                    text-decoration-line: line-through;
+                  "
+                >R$ 00,00</p>
+                <span style="
+                    color: #999999;
+                    font-family: Arial;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 12px;
+                ">Valor mensal</span>
+              </div>
+            </div>
+            <div style="
+              display: flex; 
+              justify-content: space-between; 
+              vertical-align: top; 
+              padding-bottom: 14px; 
+              border-bottom: 1px dashed #999999;
+              margin-bottom: 20px; ">
+              <p style="
+                color: #999999;
+              font-family: Arial;
+              font-style: normal;
+              font-weight: bold;
+              font-size: 14px;
+              line-height: 26px;
+              ">Plano 10.000</p>
+              <div style="
+                text-align: right;
+              ">
+                <p
+                  style="
+                    color: #999999;
+                    font-family: Arial;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 14px;
+                    text-decoration-line: line-through;
+                  "
+                >R$ 00,00</p>
+                <span style="
+                    color: #999999;
+                    font-family: Arial;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 12px;
+                ">Valor mensal</span>
+              </div>
+            </div>
+            <div style="
+              display: flex; 
+              justify-content: space-between; 
+              vertical-align: top; 
+              padding-bottom: 14px; 
+              ">
+              <p style="
+                color: #999999;
+              font-family: Arial;
+              font-style: normal;
+              font-weight: bold;
+              font-size: 14px;
+              line-height: 26px;
+              ">Plano 20.000</p>
+              <div style="
+                text-align: right;
+              ">
+                <p
+                  style="
+                    color: #999999;
+                    font-family: Arial;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 14px;
+                    text-decoration-line: line-through;
+                  "
+                >R$ 00,00</p>
+                <span style="
+                    color: #999999;
+                    font-family: Arial;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 12px;
+                ">Valor mensal</span>
+              </div>
+            </div>
+            
+            </td>
+          </tr>
+        </tbody>
+    </table>
+
+    <!-- FIM DA SECTION VALORES CORPORATIVO E PADRAO -->
+
+     <!-- CALL TO ACTION " QUERO FAZER PARTE " -->
+    <table cellpadding="0" cellspacing="0" width="600" align="center" style="background-color: #FFFFFF;">
+        <tr>
+            <td width="25"></td>
+            <td width="550">
+                <table cellpadding="0" cellspacing="0" width="600">
+                  <tr height="10"></tr>
+                    <tr style="background-color:#FFFFFF;  text-align: center">
+                        <td  style="text-align: center; width: 100%; height: 90px;">
+                            <a 
+                            style="
+                              font-family: Arial, Helvetica, sans-serif;
+                              font-style: normal;
+                              font-weight: 700;
+                              font-size: 14px;
+                              text-decoration: none;
+                              color: #000000; 
+                              text-align: center;
+                              border-radius: 8px;
+                              width: 264px; 
+                              height: 64px;
+                              padding: 15px 45px;
+                              background-color: #FF7020;
+                              "
+                              href="https://www.shoppingsmiles.com.br/smiles/index.jsf" 
+                              target="_blank">
+                                Quero fazer parte
+                            </a>
+                        </td>
+                        <td width="190"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr height="10"></tr>
+    </table>
+    <!-- FIM DA SECTION CALL TO ACTION " QUERO FAZER PARTE " -->
+  </div>
+    
+
+  <!-- PARCEIROS -->
+    <div>
+      <!--[if mso | IE]>
+            <table
+                align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600"
+            >
+                <tr>
+                <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+            <![endif]-->
+      <div style="margin: 0px auto; max-width: 600px">
+        <table
+            align="center"
+            border="0"
+            width="600"
+            cellpadding="0"
+            cellspacing="0"
+            role="presentation"
+            style="border-collapse: collapse; border-spacing: 0px"
+          >
+            <tbody>
+              <tr>
+                <td style="width: 600px">
+                  <img
+                    height="auto"
+                    src="http://smiles-mkt.s3.amazonaws.com/transacionais/img/footer_destkop.png"
+                    style="
+                      border: 0;
+                      outline: none;
+                      text-decoration: none;
+                      height: auto;
+                      width: 100%;
+                    "
+                    width="600"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      <!--[if mso | IE]>
+                    </td>
+                
+                </tr>
+            
+                        </table>
+                        <![endif]-->
+    </div>
+      
+  <!-- BAIXE O APP -->
+    <table
+      border="0"
+      cellpadding="0"
+      cellspacing="0"
+      style="background-color: #ffffff; margin: 0 auto"
+      width="600"
+      align="center"
+    >
+    <div style="margin: 0px auto; max-width: 600px; text-align: center">
+      <tbody>
+        <tr>
+          <td style="text-align: center; font-size: 0" align="center">
+            <div style="display: inline-block; vertical-align: top">
+              <table
+                align="right"
+                width="206"
+                cellspacing="0"
+                cellpadding="0"
+                border="0"
+              >
+                <tbody>
+                  <tr>
+                    <td
+                      colspan="2"
+                      height="20"
+                      style="line-height: 0px; font-size: 0px; height: 5px"
+                    >
+                      &nbsp;
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <img
+                        src="http://smiles-mkt.s3.amazonaws.com/emails/20180723/01/imgs/ico_mobile.jpg"
+                        width="36"
+                        height="43"
+                        border="0"
+                        style="
+                          display: block;
+                          margin: 0 auto;
+                          width: 36px;
+                          height: 43px;
+                        "
+                      />
+                    </td>
+                    <td
+                      align="center"
+                      style="
+                        font-family: Arial, Tahoma, Helvetica, sans-serif;
+                        color: #7c7c7c;
+                        font-size: 12px;
+                      "
+                    >
+                      Baixe o aplicativo
+                      <span style="color: #ff5900; font-weight: bold"
+                        >Smiles!</span
+                      >
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td
+                      colspan="2"
+                      height="20"
+                      style="line-height: 0px; font-size: 0px; height: 20px"
+                    >
+                      &nbsp;
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!--[if gte mso 12]>
+        </td>
+        <td>
+        <![endif]-->
+
+            <div style="display: inline-block; vertical-align: top">
+              <table
+                align="left"
+                width="212"
+                height="42"
+                valign="middle"
+                cellspacing="0"
+                cellpadding="0"
+                border="0"
+              >
+                <tbody>
+                  <tr>
+                    <td
+                      colspan="3"
+                      height="20"
+                      style="line-height: 0px; font-size: 0px; height: 10px"
+                    >
+                      &nbsp;
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td
+                      width="17"
+                      style="line-height: 0px; font-size: 0px; width: 0px"
+                    >
+                      &nbsp;
+                    </td>
+                    <td>
+                      <a
+                        href="https://appsto.re/br/-eGUab.i?origem=App_Store_Footer"
+                        target="_blank"
+                      >
+                        <img
+                          src="http://smiles-mkt.s3.amazonaws.com/emails/20180723/01/imgs/btn_applestore.jpg"
+                          width="93"
+                          height="29"
+                          border="0"
+                          style="
+                            display: block;
+                            margin: 0 auto;
+                            width: 93px;
+                            height: 29px;
+                          "
+                        />
+                      </a>
+                    </td>
+                    <td>
+                      <a
+                        href="https://play.google.com/store/apps/details?id=com.pontomobi.smiles&amp;origem=Google_Play_Footer"
+                        target="_blank"
+                      >
+                        <img
+                          src="http://smiles-mkt.s3.amazonaws.com/emails/20180723/01/imgs/btn_googleplay.jpg"
+                          width="92"
+                          height="29"
+                          border="0"
+                          style="
+                            display: block;
+                            margin: 0 auto;
+                            width: 92px;
+                            height: 29px;
+                          "
+                        />
+                      </a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td
+                      colspan="3"
+                      height="20"
+                      style="line-height: 0px; font-size: 0px; height: 20px"
+                    >
+                      &nbsp;
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!--[if gte mso 12]>
+        </td>
+        <td>
+        <![endif]-->
+          </td>
+        </tr>
+      </tbody>
+    </div>
+    </table>
+
+  <!-- REDES SOCIAS -->
+    <table
+    
+      border="0"
+      cellpadding="0"
+      cellspacing="0"
+      style="background-color: #7c7c7c; margin: 0; width: 100%;""
+      width="600"
+      align="center"
+    >
+      <tbody>
+        <tr>
+          <td>
+            <table
+              border="0"
+              cellpadding="0"
+              cellspacing="0"
+              style="background-color: #7c7c7c; margin: 0 auto"
+              class="full-width"
+              width="600"
+              align="center"
+            >
+              <tbody>
+                <tr>
+                  <td style="text-align: center; font-size: 0" align="center">
+                    <div
+                      style="display: inline-block; vertical-align: top"
+                      class="full-width"
+                    >
+                      <table
+                        align="left"
+                        width="230"
+                        cellspacing="0"
+                        cellpadding="0"
+                        border="0"
+                        class="full-width"
+                      >
+                        <tbody>
+                          <tr>
+                            <td>
+                              <table
+                                align="center"
+                                width="230"
+                                cellspacing="0"
+                                cellpadding="0"
+                                border="0"
+                                class="full-width"
+                                style="max-width: 230px"
+                              >
+                                <tbody>
+                                  <tr>
+                                    <td
+                                      height="15"
+                                      style="
+                                        line-height: 0px;
+                                        font-size: 0px;
+                                        height: 15px;
+                                      "
+                                    >
+                                      &nbsp;
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>
+                                      <a
+                                        href="https://www.smiles.com.br/home"
+                                        target="_blank"
+                                      >
+                                        <img
+                                          src="http://smiles-mkt.s3.amazonaws.com/emails/20180723/01/imgs/logo_smiles.jpg"
+                                          width="84"
+                                          height="36"
+                                          border="0"
+                                          style="
+                                            display: block;
+                                            margin: 0 auto;
+                                            width: 84px;
+                                            height: 36px;
+                                          "
+                                        />
+                                      </a>
+                                    </td>
+
+                                    <td
+                                      align="right"
+                                      style="
+                                        font-family: Arial, Tahoma, Helvetica,
+                                          sans-serif;
+                                        color: #ffffff;
+                                        font-size: 14px;
+
+                                        font-weight: bold;
+                                      "
+                                    >
+                                      <a
+                                        href="https://www.smiles.com.br/home"
+                                        target="_blank"
+                                        style="
+                                          color: #ffffff;
+                                          margin-left: 20px;
+                                        "
+                                        >www.smiles.com.br</a
+                                      >
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td
+                                      height="15"
+                                      style="
+                                        line-height: 0px;
+                                        font-size: 0px;
+                                        height: 15px;
+                                      "
+                                    >
+                                      &nbsp;
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <!--[if gte mso 12]>
+                </td>
+                <td>
+                <![endif]-->
+
+                    <div
+                      style="display: inline-block; vertical-align: top"
+                      class="full-width"
+                    >
+                      <table
+                        align="left"
+                        width="300"
+                        valign="middle"
+                        height="36"
+                        cellspacing="0"
+                        cellpadding="0"
+                        border="0"
+                        style="height: 32px; vertical-align: middle"
+                        class="full-width"
+                      >
+                        <tbody>
+                          <tr>
+                            <td>
+                              <table
+                                align="right"
+                                width="200"
+                                valign="middle"
+                                height="36"
+                                cellspacing="0"
+                                cellpadding="0"
+                                border="0"
+                                style="height: 32px; vertical-align: middle"
+                                class="full-width"
+                              >
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      <table
+                                        align="center"
+                                        width="200"
+                                        valign="middle"
+                                        height="36"
+                                        cellspacing="0"
+                                        cellpadding="0"
+                                        border="0"
+                                        style="
+                                          height: 32px;
+                                          vertical-align: middle;
+                                          max-width: 200px;
+                                        "
+                                        class="full-width"
+                                      >
+                                        <tbody>
+                                          <tr>
+                                            <td
+                                              class="td-icons-social"
+                                              height="15"
+                                              style="
+                                                line-height: 0px;
+                                                font-size: 0px;
+                                                height: 15px;
+                                              "
+                                            >
+                                              &nbsp;
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                              <a
+                                                href="https://www.linkedin.com/company/3477383/?origem=Linkedin"
+                                                target="_blank"
+                                              >
+                                                <img
+                                                  src="http://smiles-mkt.s3.amazonaws.com/emails/20180723/01/imgs/ico_linkedin.jpg"
+                                                  width="29"
+                                                  height="32"
+                                                  border="0"
+                                                  style="
+                                                    display: block;
+                                                    margin: 0 5px;
+                                                    width: 29px;
+                                                    height: 32px;
+                                                  "
+                                                />
+                                              </a>
+                                            </td>
+                                            <td>
+                                              <a
+                                                href="https://www.facebook.com/smilesoficial?origem=Facebook"
+                                                target="_blank"
+                                              >
+                                                <img
+                                                  src="http://smiles-mkt.s3.amazonaws.com/emails/20180723/01/imgs/ico_facebook.jpg"
+                                                  width="14"
+                                                  height="32"
+                                                  border="0"
+                                                  style="
+                                                    display: block;
+                                                    margin: 0 5px;
+                                                    width: 14px;
+                                                    height: 32px;
+                                                  "
+                                                />
+                                              </a>
+                                            </td>
+                                            <td>
+                                              <a
+                                                href="https://twitter.com/smilesoficial?origem=Twitter"
+                                                target="_blank"
+                                              >
+                                                <img
+                                                  src="http://smiles-mkt.s3.amazonaws.com/emails/20180723/01/imgs/ico_twitter.jpg"
+                                                  width="28"
+                                                  height="32"
+                                                  border="0"
+                                                  style="
+                                                    display: block;
+                                                    margin: 0 5px;
+                                                    width: 28px;
+                                                    height: 32px;
+                                                  "
+                                                />
+                                              </a>
+                                            </td>
+                                            <td>
+                                              <a
+                                                href="https://instagram.com/smiles.oficial?origem=Instagram"
+                                                target="_blank"
+                                              >
+                                                <img
+                                                  src="http://smiles-mkt.s3.amazonaws.com/emails/20180723/01/imgs/ico_instagram.jpg"
+                                                  width="27"
+                                                  height="32"
+                                                  border="0"
+                                                  style="
+                                                    display: block;
+                                                    margin: 0 5px;
+                                                    width: 27px;
+                                                    height: 32px;
+                                                  "
+                                                />
+                                              </a>
+                                            </td>
+                                            <td>
+                                              <a
+                                                href="https://open.spotify.com/user/nwlniija6bhxjqdd2iusmzu9g"
+                                                target="_blank"
+                                              >
+                                                <img
+                                                  src="http://smiles-mkt.s3.amazonaws.com/emails/20180723/01/imgs/ico_spotify.jpg"
+                                                  width="30"
+                                                  height="32"
+                                                  border="0"
+                                                  style="
+                                                    display: block;
+                                                    margin: 0 5px;
+                                                    width: 30px;
+                                                    height: 32px;
+                                                  "
+                                                />
+                                              </a>
+                                            </td>
+                                            <td>
+                                              <a
+                                                href="https://open.spotify.com/user/nwlniija6bhxjqdd2iusmzu9g"
+                                                target="_blank"
+                                              >
+                                                <img
+                                                  src="https://smiles-mkt.s3.amazonaws.com/emails_clube_smiles/clube_corporativo/social/youtube.png"
+                                                  border="0"
+                                                  style="
+                                                    display: block;
+                                                    margin: 0 5px;
+                                                  "
+                                                />
+                                              </a>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <!--[if gte mso 12]>
+                </td>
+                <td>
+                <![endif]-->
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  <!--FIM  REDES SOCIAIS -->
+  </body>
+</html>
